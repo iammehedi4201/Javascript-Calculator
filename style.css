@@ -28,11 +28,12 @@ body {
 
 .calculator {
     min-height: 100vh;
-    width: 30% !important;
+  
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+
 
 }
 

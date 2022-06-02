@@ -1,269 +1,11 @@
-document.getElementById("deleteButton").addEventListener("click",
-    function () {
+function catchValue(id) {
 
-        let catchOne = document.getElementById("deleteButton").innerText;
+    let catchOne = document.getElementById(id).innerText;
 
-        if (catchOne == "DEL") {
-
-            saveCurrent(catchOne)
-        }
-        else {
-
-            catchOne = parseInt(catchOne)
-
-            saveCurrent(catchOne);
-
-        }
-    })
-
-document.getElementById("button-one").addEventListener("click",
-    function () {
-
-        let catchOne = document.getElementById("button-one").innerText;
-
-        catchOne = parseInt(catchOne)
-
-        saveCurrent(catchOne)
-    })
-
-document.getElementById("buttonTwo").addEventListener("click",
-    function () {
-
-        let catchOne = document.getElementById("buttonTwo").innerText;
-
-        catchOne = parseInt(catchOne)
-
-        saveCurrent(catchOne);
-
-    })
-
-document.getElementById("buttonThree").addEventListener("click",
-    function () {
-
-        let catchOne = document.getElementById("buttonThree").innerText;
-
-        catchOne = parseInt(catchOne)
-
-        saveCurrent(catchOne);
-
-    })
-
-document.getElementById("buttonFour").addEventListener("click",
-    function () {
-
-        let catchOne = document.getElementById("buttonFour").innerText;
-
-        catchOne = parseInt(catchOne)
-
-        saveCurrent(catchOne);
-
-    })
-
-document.getElementById("buttonFive").addEventListener("click",
-    function () {
-
-        let catchOne = document.getElementById("buttonFive").innerText;
-
-        catchOne = parseInt(catchOne)
-
-        saveCurrent(catchOne);
-
-    })
-
-document.getElementById("buttonSix").addEventListener("click",
-    function () {
-
-        let catchOne = document.getElementById("buttonSix").innerText;
-
-        catchOne = parseInt(catchOne)
-
-        saveCurrent(catchOne);
-
-    })
-
-document.getElementById("buttonSeven").addEventListener("click",
-    function () {
-
-        let catchOne = document.getElementById("buttonSeven").innerText;
-
-        catchOne = parseInt(catchOne)
-
-        saveCurrent(catchOne);
-
-    })
-
-
-document.getElementById("buttonEight").addEventListener("click",
-    function () {
-
-        let catchOne = document.getElementById("buttonEight").innerText;
-
-        catchOne = parseInt(catchOne)
-
-        saveCurrent(catchOne);
-
-    })
-
-document.getElementById("buttonNine").addEventListener("click",
-    function () {
-
-        let catchOne = document.getElementById("buttonNine").innerText;
-
-        catchOne = parseInt(catchOne)
-
-        saveCurrent(catchOne);
-
-    })
-
-    document.getElementById("zeroButton").addEventListener("click",
-    function () {
-
-        let catchOne = document.getElementById("zeroButton").innerText;
-
-        catchOne = parseInt(catchOne)
-
-        saveCurrent(catchOne);
-
-    })
-
-document.getElementById("fullStopButton").addEventListener("click",
-    function () {
-
-        let catchOne = document.getElementById("fullStopButton").innerText;
-
-        console.log("The full Stop Button is ", catchOne);
-
-
-
-        saveCurrent(catchOne);
-
-    })
-
-
-
-document.getElementById("plusButton").addEventListener("click",
-    function () {
-
-        let catchOne = document.getElementById("plusButton").innerText;
-
-        if (catchOne == "+") {
-
-            saveCurrent(catchOne)
-        }
-        else {
-
-            catchOne = parseInt(catchOne)
-
-            saveCurrent(catchOne);
-
-        }
-
-    })
-
-document.getElementById("minusButton").addEventListener("click",
-    function () {
-
-        let catchOne = document.getElementById("minusButton").innerText;
-
-        if (catchOne == "-") {
-
-            saveCurrent(catchOne)
-        }
-        else {
-
-            catchOne = parseInt(catchOne)
-
-            saveCurrent(catchOne);
-
-        }
-
-    })
-
-document.getElementById("multipleButton").addEventListener("click",
-    function () {
-
-        let catchOne = document.getElementById("multipleButton").innerText;
-
-        console.log("The catchOne is", catchOne);
-
-        if (catchOne == "*") {
-
-            saveCurrent(catchOne)
-        }
-        else {
-
-            catchOne = parseInt(catchOne)
-
-            saveCurrent(catchOne);
-
-        }
-
-    })
-
-document.getElementById("divisionButton").addEventListener("click",
-    function () {
-
-        let catchOne = document.getElementById("divisionButton").innerText;
-
-        console.log("The catchOne is", catchOne);
-
-        if (catchOne == "/") {
-
-            saveCurrent(catchOne)
-        }
-        else {
-
-            catchOne = parseInt(catchOne)
-
-            saveCurrent(catchOne);
-
-        }
-
-    })
-
-
-document.getElementById("equalButton").addEventListener("click",
-    function () {
-
-        let catchOne = document.getElementById("equalButton").innerText;
-
-        if (catchOne == "=") {
-
-            saveCurrent(catchOne)
-        }
-        else {
-
-            catchOne = parseInt(catchOne)
-
-            saveCurrent(catchOne);
-
-        }
-
-    })
-
-document.getElementById("AcButton").addEventListener("click",
-    function () {
-
-        let catchOne = document.getElementById("AcButton").innerText;
-
-        console.log("The Catch One is:", catchOne);
-
-        if (catchOne == "AC") {
-
-            saveCurrent(catchOne)
-        }
-        else {
-
-            catchOne = parseInt(catchOne)
-
-            saveCurrent(catchOne);
-
-        }
-
-    })
-
-
-
+    saveCurrent(catchOne);
+    
+    
+}
 
 function saveCurrent(catchOne) {
 
@@ -350,61 +92,28 @@ function saveCurrent(catchOne) {
         document.getElementById("currentDisplay").innerText = newCurrentValue;
 
     }
-
-    else if (catchOne == "+") {
-
-        let catchTwo = document.getElementById("currentDisplay").innerText;
-
-        catchTwo = catchTwo + catchOne;
-
-        document.getElementById("previous-dispaly").innerText = catchTwo;
-
-        document.getElementById("currentDisplay").innerText = '';
-
-        console.log("The CatchTwo is ", catchTwo[catchTwo.length - 1]);
-
-    }
-
-    else if (catchOne == "-") {
+    else if (catchOne == "+" || catchOne == "-" || catchOne == "*" || catchOne == "/" ){
 
         let catchTwo = document.getElementById("currentDisplay").innerText;
 
         catchTwo = catchTwo + catchOne;
+        
+        if (catchTwo == '+' || catchTwo == "-" || catchTwo == "*" || catchTwo == "/"  )
+        {
+            console.log("This is not allow");
+        }
+        else
+        {
 
-        document.getElementById("previous-dispaly").innerText = catchTwo;
+            document.getElementById("previous-dispaly").innerText = catchTwo;
 
-        document.getElementById("currentDisplay").innerText = '';
+            document.getElementById("currentDisplay").innerText = '';
 
-        console.log("The CatchTwo is ", typeof catchTwo[catchTwo.length - 1]);
+        }
 
-    }
-    else if (catchOne == "*") {
-
-        let catchTwo = document.getElementById("currentDisplay").innerText;
-
-        catchTwo = catchTwo + catchOne;
-
-        document.getElementById("previous-dispaly").innerText = catchTwo;
-
-        document.getElementById("currentDisplay").innerText = '';
-
-        console.log("The CatchTwo is ", typeof catchTwo[catchTwo.length - 1]);
-
+    
     }
 
-    else if (catchOne == "/") {
-
-        let catchTwo = document.getElementById("currentDisplay").innerText;
-
-        catchTwo = catchTwo + catchOne;
-
-        document.getElementById("previous-dispaly").innerText = catchTwo;
-
-        document.getElementById("currentDisplay").innerText = '';
-
-        console.log("The CatchTwo is ", typeof catchTwo[catchTwo.length - 1]);
-
-    }
 
     else {
 
@@ -412,6 +121,8 @@ function saveCurrent(catchOne) {
         let catchTwo = document.getElementById("currentDisplay").innerText;
 
         catchTwo = catchTwo + catchOne;
+
+        console.log("The catch Two value is:",catchTwo);
 
         let count = 0;
 
@@ -442,10 +153,3 @@ function saveCurrent(catchOne) {
 
     }
 }
-
-
-
-const text = 'abcdef'
-const editedText = text.slice(0, -1);
-
-console.log("The text is:", editedText);
